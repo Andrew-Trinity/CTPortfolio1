@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Desktop — Student Guide</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="color-scheme" content="dark light">
+  <style>
+    /* Page-specific extras for the instructions page */
+    .steps { counter-reset: step; display: grid; gap: 1rem; }
+    .step { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1rem 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .step h3 { margin: 0 0 0.5rem; font-size: 1.1rem; display: flex; align-items: center; gap: .6rem; }
+    .step h3::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #051018; font-weight: 700; }
+    .callout { border-left: 4px solid var(--accent); padding: .75rem 1rem; background: rgba(34,211,238,0.08); border-radius: 8px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0b1020; border:1px solid rgba(255,255,255,.12); padding:.1rem .35rem; border-radius: .35rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+    ol.tight > li { margin: 0.35rem 0; }
+    .muted { color: var(--muted); }
+    .btn { display:inline-block; padding:.5rem .8rem; border-radius:.6rem; background:rgba(167,139,250,.15); color:var(--text); border:1px solid rgba(255,255,255,.08); text-decoration:none; }
+    .btn:hover { filter: brightness(1.1); text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">10CT <span>Portfolio</span></div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="web-dev.html">Web Dev</a>
+        <a href="game-dev.html">Game Dev</a>
+        <a href="instructions.html" class="active">GitHub Desktop Guide</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+<h1>GitHub Desktop — Student Guide</h1>
+<p class="muted">Use this page to publish and update your portfolio using GitHub Desktop.</p>
+
+<div class="steps">
+  <section class="step">
+    <h3>Install GitHub Desktop</h3>
+    <div class="two-col">
+      <div>
+        <ol class="tight">
+          <li>Go to <span class="kbd">desktop.github.com</span> and download for Windows.</li>
+          <li>Run the installer and finish setup.</li>
+          <li>When asked, allow it to install Git — no extra steps needed.</li>
+        </ol>
+      </div>
+      <div class="callout">
+        <strong>Tip:</strong> If you already have it, open it from the Start Menu.
+      </div>
+    </div>
+  </section>
+
+  <section class="step">
+    <h3>Sign in to GitHub</h3>
+    <ol class="tight">
+      <li>Open <strong>GitHub Desktop</strong>.</li>
+      <li>Click <em>Sign in to GitHub.com</em> and log in in the browser.</li>
+      <li>Return to Desktop and click <em>Continue</em>.</li>
+    </ol>
+  </section>
+
+  <section class="step">
+    <h3>Create a Repository on GitHub</h3>
+    <ol class="tight">
+      <li>In a browser, go to <span class="kbd">github.com</span> → <strong>+</strong> (top-right) → <em>New repository</em>.</li>
+      <li>Name it like <strong>10CT-Portfolio</strong>. Leave README, .gitignore, and License <em>unchecked</em>.</li>
+      <li>Click <strong>Create repository</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="step">
+    <h3>Add Your Local Folder</h3>
+    <ol class="tight">
+      <li>Download the starter folder (or use your own project) and keep everything together.</li>
+      <li>In GitHub Desktop: <em>File → Add local repository…</em></li>
+      <li>Choose your folder (e.g., <span class="kbd">Desktop → WebDev → Project1-10CT-Portfolio</span>) and click <strong>Add repository</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="step">
+    <h3>Publish to GitHub</h3>
+    <ol class="tight">
+      <li>In GitHub Desktop, click <strong>Publish repository</strong>.</li>
+      <li>Choose <em>Public</em> or <em>Private</em>. Keep the name the same.</li>
+      <li>Click <strong>Publish Repository</strong>.</li>
+    </ol>
+    <p class="callout">Now refresh your repo page on GitHub — your files should be online.</p>
+  </section>
+
+  <section class="step">
+    <h3>Everyday Workflow</h3>
+    <ol class="tight">
+      <li><strong>Save</strong> your changed files.</li>
+      <li>Open <strong>GitHub Desktop</strong>: review changed files on the left.</li>
+      <li>Write a short <em>Summary</em> (e.g., <em>"Add navbar styling"</em>).</li>
+      <li>Click <strong>Commit to main</strong>.</li>
+      <li>Click <strong>Push origin</strong> (top-right) to upload to GitHub.</li>
+    </ol>
+  </section>
+
+  <section class="step">
+    <h3>Common Fixes</h3>
+    <ul>
+      <li><strong>Don’t see files online?</strong> Click <em>Push origin</em> in GitHub Desktop.</li>
+      <li><strong>Wrong folder?</strong> <em>File → Remove repository</em>, then <em>Add local repository…</em> again.</li>
+      <li><strong>Publish button greyed out?</strong> Check <em>Repository → Repository Settings…</em> for the GitHub link.</li>
+    </ul>
+  </section>
+
+  <section class="step">
+    <h3>Next Steps</h3>
+    <p>Open <a class="btn" href="index.html">Home</a> to preview your site, or start editing content on the <a class="btn" href="web-dev.html">Web Dev</a> and <a class="btn" href="game-dev.html">Game Dev</a> pages.</p>
+  </section>
+</div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container">© 2026 10CT Portfolio — GitHub Desktop Guide</div>
+  </footer>
+</body>
+</html>
